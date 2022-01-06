@@ -6,18 +6,14 @@
     <description>My feed preprocessed at 1.8x</description>
     <item>
       <description>
-        <content:encoded>
-          <![CDATA[The Sunset Explorers share tips, techniques and recommendations for great hikes and adventures around the United States. Listen on
-          <a
-          href="https://www.apple.com/itunes/podcasts/">Apple Podcasts</a>.]]>
-        </content:encoded>
+        <content:encoded><![CDATA[Listen here.]]></content:encoded>
       </description>
       <enclosure
-        length="498537"
+        length="12518257"
         type="audio/mpeg"
-        url="http://example.com/podcasts/everything/AllAboutEverythingEpisode4.mp3"
+        url="https://raw.githubusercontent.com/jacobwood27/032_fastaudiocasts/main/fast.mp3"
       />
-      <guid>aae20190418</guid>
+      <guid>sgdfgdfgsdfgsfgsfdgsdweye5eghj67</guid>
       <pubDate>Tue, 8 Jan 2019 01:15:00 GMT</pubDate>
     </item>
   </channel>
