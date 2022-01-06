@@ -1,0 +1,14 @@
+Podcast rss feed:
+https://feeds.simplecast.com/82FI35Px
+
+Podcast audio file in rss feed:
+https://nyt-injected.simplecastaudio.com/3026b665-46df-4d18-98e9-d1ce16bbb1df/episodes/c0e4becd-21c5-4f24-bc36-4cb3d1fdb09f/audio/128/default.mp3/default.mp3_58596fa26ffacb62ef2ceaf9ac4f5f05_68200090.mp3?aid=rss_feed&awCollectionId=3026b665-46df-4d18-98e9-d1ce16bbb1df&awEpisodeId=c0e4becd-21c5-4f24-bc36-4cb3d1fdb09f&feed=82FI35Px&hash_redirect=1&x-total-bytes=68200090&x-ais-classified=streaming&listeningSessionID=0CD_382_5__878c0ce53f81ba2aafc6c43fcccc128cc7917940
+
+How to speed up audio w/ ffmpg:
+https://superuser.com/questions/519649/tool-to-bulk-speed-up-convert-an-audio-file
+
+How to host on github:
+https://rodydavis.medium.com/how-to-host-your-podcast-for-free-on-github-pages-4d701a6704ac#:~:text=Create%20a%20new%20Github%20Action,files%20will%20be%20hosted%20instantly.
+
+Garmin app:
+https://www.playrun.app/
