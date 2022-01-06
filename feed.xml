@@ -5,9 +5,7 @@
     <language>en-us</language>
     <description>My feed preprocessed at 1.8x</description>
     <item>
-      <description>
-        <content:encoded><![CDATA[Listen here.]]></content:encoded>
-      </description>
+      <description>Fastcast</description>
       <enclosure
         length="12518257"
         type="audio/mpeg"
