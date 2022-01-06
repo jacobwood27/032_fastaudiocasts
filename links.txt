@@ -8,7 +8,13 @@ How to speed up audio w/ ffmpg:
 https://superuser.com/questions/519649/tool-to-bulk-speed-up-convert-an-audio-file
 
 How to host on github:
-https://rodydavis.medium.com/how-to-host-your-podcast-for-free-on-github-pages-4d701a6704ac#:~:text=Create%20a%20new%20Github%20Action,files%20will%20be%20hosted%20instantly.
+https://rodydavis.medium.com/how-to-host-your-podcast-for-free-on-github-pages-4d701a6704ac
 
 Garmin app:
 https://www.playrun.app/
+
+100000*8/(3*60*60) = 74 kbit/sec for 3 hour audio under 100mb
+
+ffmpeg in github actions
+- name: Setup FFmpeg
+  uses: FedericoCarboni/setup-ffmpeg@v1.1.0
