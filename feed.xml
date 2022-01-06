@@ -6,12 +6,8 @@
     <description>My feed preprocessed at 1.8x</description>
     <item>
       <description>Fastcast</description>
-      <enclosure
-        length="12518257"
-        type="audio/mpeg"
-        url="https://raw.githubusercontent.com/jacobwood27/032_fastaudiocasts/main/fast.mp3"
-      />
-      <guid>sgdfgdfgsdfgsfgsfdgsdweye5eghj67</guid>
+      <enclosure length="12518257" type="audio/mpeg" url="https://raw.githubusercontent.com/jacobwood27/032_fastaudiocasts/main/fast.mp3"/>
+      <guid>e53bb13a-da3f-4d18-a250-64b2cf552fef</guid>
       <pubDate>Tue, 8 Jan 2019 01:15:00 GMT</pubDate>
     </item>
   </channel>
