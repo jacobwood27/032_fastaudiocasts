@@ -2,25 +2,21 @@ import os
 import xml.etree.ElementTree as ET
 
 pods = [
-    ("ezra", "https://feeds.simplecast.com/82FI35Px"),
-    ("lex",  "https://lexfridman.com/feed/podcast/"),
-    ("80k", "https://feeds.feedburner.com/80000HoursPodcast"),
-    ("rspeak", "https://rationallyspeakingpodcast.libsyn.com/rss"),
-    ("tyler", "https://cowenconvos.libsyn.com/rss"),
-    ("econ", "http://files.libertyfund.org/econtalk/EconTalk.xml"),
-    ("mscape", "https://rss.art19.com/sean-carrolls-mindscape"),
+    ("ezra",   "1.8", "https://feeds.simplecast.com/82FI35Px"),
+    ("lex",    "1.8", "https://lexfridman.com/feed/podcast/"),
+    ("80k",    "1.8", "https://feeds.feedburner.com/80000HoursPodcast"),
+    ("rspeak", "1.8", "https://rationallyspeakingpodcast.libsyn.com/rss"),
+    ("tyler",  "1.8", "https://cowenconvos.libsyn.com/rss"),
+    ("econ",   "1.8", "http://files.libertyfund.org/econtalk/EconTalk.xml"),
+    ("mscape", "1.8", "https://rss.art19.com/sean-carrolls-mindscape"),
 ]
-
-speed = "1.8"
-
-
 
 feed = ET.parse("feed.xml")
 feed_root = feed.getroot()
 feed_chan = feed_root.find('./channel')
 
 for pod in pods:
-    os.system("wget " + pod[1] + " -O raw.xml")
+    os.system("wget " + pod[2] + " -O raw.xml")
     
     tree = ET.parse("raw.xml")
     root = tree.getroot()
@@ -42,7 +38,7 @@ for pod in pods:
     if not os.path.exists(full_file):
         # Get the new episode audio and save it
         os.system("wget \"" + ep_audio + "\" -O raw.mp3")
-        os.system("ffmpeg -i raw.mp3 -filter:a \"atempo=" + speed + "\" -q:a 6 " + full_file) #quality 6 seems to be a good middle ground https://trac.ffmpeg.org/wiki/Encode/MP3  at ~115kb/s we should be able to store a 2 hour audio file without exceeding 100MB LFS [100E6/(115E3/8)/60/60=1.93]
+        os.system("ffmpeg -i raw.mp3 -filter:a \"atempo=" + pod[1] + "\" -q:a 6 " + full_file) #quality 6 seems to be a good middle ground https://trac.ffmpeg.org/wiki/Encode/MP3  at ~115kb/s we should be able to store a 2 hour audio file without exceeding 100MB LFS [100E6/(115E3/8)/60/60=1.93]
         os.remove("raw.mp3")
         
         #Make the new XML item element
@@ -68,6 +64,6 @@ for pod in pods:
         new_item.append(new_pubdate)
         
         #Add it to feed.xml
-        feed_chan.append(new_item)
+        feed_chan.insert(4, new_item) #after title, language, and description
         feed.write('feed.xml')
     
