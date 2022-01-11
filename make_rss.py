@@ -53,7 +53,7 @@ for pod in pods:
                                    type="audio/mpeg")
 
         new_guid = ET.Element("guid")
-        new_guid.text = ep_id + "_1.8x"
+        new_guid.text = "1.8x_" + ep_id
         
         new_pubdate = ET.Element("pubDate")
         new_pubdate.text = ep_date
