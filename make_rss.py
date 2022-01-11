@@ -64,6 +64,6 @@ for pod in pods:
         new_item.append(new_pubdate)
         
         #Add it to feed.xml
-        feed_chan.insert(4, new_item) #after title, language, and description
+        feed_chan.insert(3, new_item) #after title, language, and description
         feed.write('feed.xml')
     
